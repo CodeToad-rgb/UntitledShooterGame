@@ -16,20 +16,15 @@ let powerUps = [new PowerUp(100, 100, 10, { x: 0, y: 0 })];
 let difficulty = 0;
 let pColor = "white";
 
-const skullIcon = new Icon(
-	skullB64,
-	canvas.width / 5,
-	canvas.height / 40,
-	canvas.width / 30
-);
+const skullIcon = new Icon(skullB64, canvas.width / 5, canvas.height / 40, canvas.width / 30);
 
-// spawnParticles(
-//   bullet.x,
-//   bullet.y,
-//   `hsl(${enemy.color},100%,50%)`,
-//   25,
-//   particles
-// );
+spawnParticles(
+	bullet.x,
+	bullet.y,
+	`hsl(${enemy.color},100%,50%)`,
+	25,
+	particles
+);
 
 const powered = {
 	kill: {
@@ -223,13 +218,7 @@ const scenePlaying = () => {
 			let dist = Math.hypot(bullet.x - power.x, bullet.y - power.y);
 
 			if (dist - bullet.r - power.r < 1) {
-				spawnParticles(
-					bullet.x,
-					bullet.y,
-					`hsl(${power.color},100%, 50%)`,
-					15,
-					particles
-				);
+				spawnParticles(bullet.x, bullet.y, `hsl(${power.color},100%, 50%)`, 15, particles);
 
 				switch (power.type) {
 					//kill
@@ -258,6 +247,9 @@ const scenePlaying = () => {
 			if (power.alpha <= 0.01) {
 				powerUps.splice(poweri, 1);
 			}
+		}
+		else if (power.alpha > 0.9) {
+			power.alpha++
 		}
 	});
 

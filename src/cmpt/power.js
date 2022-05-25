@@ -19,9 +19,10 @@ class PowerUp {
 
     let anim = gsap.timeline({ repeat: -1 });
 
+    this.color = 0;
+
     switch (this.type) {
       case 0:
-        this.color = 0;
         anim
           .to(this, {
             color: 0,
