@@ -248,9 +248,6 @@ const scenePlaying = () => {
 				powerUps.splice(poweri, 1);
 			}
 		}
-		else if (power.alpha < 0.9) {
-			power.alpha++
-		}
 	});
 
 	//update particles
