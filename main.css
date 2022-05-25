@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+@font-face {
+  font-family: "PopCorn";
+  src: url("https://cdn.glitch.com/8fa24efb-3aa5-45f6-a2f1-f54d174790a7/PoppkornRegular-MzKY.ttf?v=1652379336388");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+/*   user-select: none; */
+}
+
+.font-poppkorn{
+  font-family: "PopCorn",cursive;
+}
+
+body {
+  background-color: cyan;
+}
+
+.score {
+  /*    fixed text-white text-sm ml-2 mt-1 select-none*/
+/*   position: fixed;
+  color: white;
+  top: 0;
+  left: 0;
+  font-family: "PopCorn", cursive;
+  font-size: 2.5vw; */
+}
+
+#menuFlex {
+  /*  fixed inset-0 flex items-center justify-center  */
+/*   display: flex;
+  inset: 0;
+  position: fixed;
+  justify-content: center;
+  align-items: center; */
+}
+
+#menuCont {
+   
+  /*   bg-white max-w-md w-full p-6 text-center */
+/*   border-radius: 10px;
+  background-color: #60686c;
+  max-width: 28rem;
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  color:  */
+}
+
+#startButton{
+/*   bg-blue-500 text-white w-full py-3 rounded-full */
+/*   background-color: #85C7F2;
+  color: #DBDBDB; */
+  
+}
+
+/* .cornerscore {
+  position: fixed;
+  display: flex;
+  color: white;
+  user-select: none;
+} */
+
+canvas {
+  image-rendering: optimize-contrast;
+  position: relative;
+}
