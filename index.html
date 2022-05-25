@@ -1,3 +1,62 @@
+<!DOCTYPE html>
 <html>
-gamr money
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <canvas> your browser does not support canvas. </canvas>
+
+    <div class="fixed text-white inset-0 font-poppkorn text-2xl select-none">
+      <span>SCORE: </span>
+      <span id="score">0</span>
+      <br />
+      <span>HIGH-SCORE: </span>
+      <span id="highScore">0</span>
+    </div>
+
+    <div
+      id="menuFlex"
+      class="fixed inset-0 flex items-center justify-center select-none"
+    >
+      <div
+        id="menuCont"
+        class="bg-slate-400 text-white rounded-3xl max-w-md w-full p-6 text-center"
+      >
+        <h1 class="text-4xl font-bold leading-none" id="endScore">0</h1>
+        <p class="text-sm text-stone-50 mb-4">Points</p>
+        <div>
+          <button id="startButton" class="bg-cyan-500 py-3 w-full rounded-full">
+            Start
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.3.1/cjs/pixi.min.js"></script> -->
+  <script src="src/cmpt/images.js"></script>
+  <script src="src/cmpt/icon.js"></script>
+  <script src="src/cmpt/bullet.js"></script>
+  <script src="src/cmpt/enemy.js"></script>
+  <script src="src/cmpt/particles.js"></script>
+  <script src="src/cmpt/power.js"></script>
+  <script src="src/cmpt/player.js"></script>
+  <script src="./src/main.js"></script>
+  <!--   
+  <script src="src/tost.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cash/8.1.1/cash.min.js"></script>
+  <script src="images.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TweenMax.min.js"></script>
+  <script src="src/c.js"></script> -->
+  <!--
+  <script src="src/script.js"></script> -->
 </html>
