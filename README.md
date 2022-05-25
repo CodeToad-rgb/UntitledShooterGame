@@ -1,2 +1,2 @@
 # UntitledShooterGame
-ShootyGam
+A shooter game made in javascript.
