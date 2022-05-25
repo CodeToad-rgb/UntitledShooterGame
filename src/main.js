@@ -18,13 +18,7 @@ let pColor = "white";
 
 const skullIcon = new Icon(skullB64, canvas.width / 5, canvas.height / 40, canvas.width / 30);
 
-spawnParticles(
-	bullet.x,
-	bullet.y,
-	`hsl(${enemy.color},100%,50%)`,
-	25,
-	particles
-);
+
 
 const powered = {
 	kill: {
