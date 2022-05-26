@@ -128,7 +128,7 @@ document.querySelector("#startButton").addEventListener("click", () => {
 	playing = true; spawning = true;
 	enemies = []; particles = []; bullets = []; powerUps = [];
 	document.querySelector("#menuFlex").style.display = "none";
-	
+
 	window.requestAnimationFrame(update);
 });
 
@@ -269,7 +269,9 @@ const scenePlaying = () => {
 	//update particles
 	particles.forEach((particle, particlei) => {
 		if (particle.alpha <= 0) {
-			particles.splice(particlei, 1);
+			window.setTimeout(() => {
+				particles.splice(particlei, 1);
+			})
 		} else {
 			particle.update();
 		}
