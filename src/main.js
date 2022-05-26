@@ -319,7 +319,7 @@ window.setInterval(function () {
 
 		let vel = {
 			x: Math.cos(angle) * (7.5 + Math.floor(difficulty / 10) * 0.5),
-			y: Math.sin(angle) * 7.5 + Math.floor(difficulty / 10) * 0.5,
+			y: Math.sin(angle) * (7.5 + Math.floor(difficulty / 10) * 0.5),
 		};
 
 		enemies.push(new Enemy(x, y, r, color, vel));
