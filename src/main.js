@@ -44,7 +44,7 @@ const powered = {
 };
 
 const spawnPowerUp = () => {
-	// powerUps.push(new PowerUp(Math.random()))
+	powerUps.push(new PowerUp((Math.random() * canvas.width) + 10, (Math.random() * canvas.height) + 10, 10));
 }
 
 let spawning = false;
