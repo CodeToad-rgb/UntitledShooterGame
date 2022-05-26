@@ -51,6 +51,8 @@ let spawning = false;
 let keys = new Set();
 
 let score = 0;
+localStorage.setItem("high-score", 0);
+
 
 if (localStorage.getItem("high-score") === undefined) {
 	localStorage.setItem("high-score", 0);
