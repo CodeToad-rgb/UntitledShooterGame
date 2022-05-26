@@ -44,7 +44,7 @@ const powered = {
 };
 
 const spawnPowerUp = () => {
-	// powerUps.push(new PowerUp(Math.random()))
+	powerUps.push(new PowerUp((Math.random() * canvas.width) + 10, (Math.random() * canvas.height) + 10, 10));
 }
 
 let spawning = false;
@@ -263,6 +263,9 @@ const scenePlaying = () => {
 			if (power.alpha <= 0.01) {
 				powerUps.splice(poweri, 1);
 			}
+		}
+		else if (power.alpha >= 0.9) {
+			power.alpha += 0.1;
 		}
 	});
 
