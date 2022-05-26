@@ -123,11 +123,11 @@ document.addEventListener("click", (e) => {
 });
 //start button
 document.querySelector("#startButton").addEventListener("click", () => {
-	playing, spawning = true;
-	window.requestAnimationFrame(update);
-	enemies, particles, bullets, powerUps = [];
-
+	playing = true; spawning = true;
+	enemies = []; particles = []; bullets = []; powerUps = [];
 	document.querySelector("#menuFlex").style.display = "none";
+	
+	window.requestAnimationFrame(update);
 });
 
 let tester = 500;
