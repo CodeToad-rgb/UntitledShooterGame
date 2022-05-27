@@ -44,7 +44,7 @@ const powered = {
 };
 
 const spawnPowerUp = () => {
-
+	powerUps.push(new PowerUp(Math.random()))
 }
 
 let spawning = false;
@@ -264,9 +264,6 @@ const scenePlaying = () => {
 				powerUps.splice(poweri, 1);
 			}
 		}
-		// else if(power.alpha >= 0.9){
-		// 	power.alpha+=0.1
-		// }
 	});
 
 	//update particles
