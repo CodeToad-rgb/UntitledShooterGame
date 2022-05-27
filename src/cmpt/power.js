@@ -13,7 +13,7 @@ class PowerUp {
 
     this.timer = 1000;
 
-    this.type = Math.floor(Math.random());
+    this.type = Math.floor(Math.random() * 2);
 
     this.alpha = 0;
 
@@ -21,8 +21,24 @@ class PowerUp {
 
     this.color = 0;
 
+    //Switch animations for power ups.
     switch (this.type) {
       case 0:
+        anim
+          .to(this, {
+            color: 225,
+            duration: 0.25,
+          })
+          .to(this, {
+            color: 180,
+            duration: 0.5,
+          })
+          .to(this, {
+            color: 225,
+            duration: 0.25,
+          });
+        break;
+      case 1:
         anim
           .to(this, {
             color: 0,
@@ -36,9 +52,6 @@ class PowerUp {
             color: 0,
             duration: 0.25,
           });
-
-        break;
-      case 1:
         break;
       case 2:
         break;

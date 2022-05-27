@@ -85,7 +85,6 @@ document.addEventListener("visibilitychange", (event) => {
 
 document.addEventListener("keydown", function (e) {
 	keys.add(e.key);
-
 	//stop people from zooming in which makes the game look really pixelated and bad
 	if (keys.has("Control")) {
 		if (keys.has("=")) {
@@ -157,12 +156,18 @@ const scenePlaying = () => {
 		{
 			let dist = Math.hypot(player.x - enemy.x, player.y - enemy.y);
 			if (dist - enemy.r - player.r <= 0) {
-				playing = false;
+				if (!powered.god.on) {
+					playing = false;
 
-				getHighestScore();
-				difficulty = 0;
-
-				return;
+					getHighestScore();
+					difficulty = 0;
+					return;
+				} else {
+					spawnParticles(enemy.x, enemy.y, enemy.color, particles)
+					window.setTimeout(() => {
+						enemies.splice(enemyi, 1);
+					}, 0);
+				}
 			}
 		}
 
@@ -216,6 +221,10 @@ const scenePlaying = () => {
 		if (powered.god.on) {
 			powered.god.time -= 1;
 
+			if (powered.god.time <= 0) {
+				power.kill.on = false;
+				power.god.time = 250;
+			}
 		}
 	}
 	// Update powerUps 
@@ -264,6 +273,9 @@ const scenePlaying = () => {
 				powerUps.splice(poweri, 1);
 			}
 		}
+		else if (power.alpha >= 0.9) {
+			powerUps.alpha += 0.1;
+		}
 	});
 
 	//update particles
@@ -276,9 +288,8 @@ const scenePlaying = () => {
 			particle.update();
 		}
 	});
-
+	//icons
 	{
-		//icons
 		skullIcon.draw();
 	}
 };
